@@ -16,6 +16,7 @@ const handleFiles = () => {
     return new Promise((resolve, reject) => {
       Papa.parse(file, {
         header: true,
+        skipEmptyLines: true,
         delimiter: ';',
         complete: (conversor)=>{resolve(conversor)}
       })
