@@ -1,0 +1,19 @@
+{
+  "name": "reincidencias",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "papaparse": "^5.4.1"
+  },
+  "scripts": {
+    "gostosu": "browserify scripts/index.js -o scripts/bundle.js",
+    "nyan": "watchify scripts/index.js -o scripts/bundle.js -v"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "watchify": "^4.0.0"
+  }
+}
