@@ -77,7 +77,7 @@ function downloadCSV(csv)
     tempLink.click();
 }
 
-//usar algo além do botão feiozo do caralho q é o padrão
+//mudar o tipo de botão
 icone.addEventListener('click', () => {
   fileInput.click();
 })
