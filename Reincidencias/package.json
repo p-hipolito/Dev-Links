@@ -8,12 +8,15 @@
   },
   "scripts": {
     "gostosu": "browserify scripts/index.js -o scripts/bundle.js",
-    "nyan": "watchify scripts/index.js -o scripts/bundle.js -v"
+    "convert": "watchify scripts/index.js -o scripts/bundle.js -v",
+    "linter:check": "prettier --check .",
+    "linter:fix": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "prettier": "^3.0.3",
     "watchify": "^4.0.0"
   }
 }
