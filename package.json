@@ -1,0 +1,22 @@
+{
+  "name": "reincidencias",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "papaparse": "^5.4.1"
+  },
+  "scripts": {
+    "gostosu": "browserify Reincidencias/scripts/index.js -o Reincidencias/scripts/bundle.js",
+    "convert": "watchify Reincidencias/scripts/index.js -o Reincidencias/scripts/bundle.js -v",
+    "linter:check": "prettier --check .",
+    "linter:fix": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "watchify": "^4.0.0"
+  }
+}
