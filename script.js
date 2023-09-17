@@ -11,9 +11,9 @@ function toggleMode() {
   if (html.classList.contains("light")) {
     //substituir imagem e descrição
     img.setAttribute("src", "./assets/avatar-light.png");
-    img.setAttribute("alt", "Paulo na estação rodoviária a noite");
+    img.setAttribute("alt", "Paulo de cabelo preso com um fundo branco");
   } else {
     img.setAttribute("src", "./assets/avatar.png");
-    img.setAttribute("alt", "Paulo de cabelo preso com um fundo branco");
+    img.setAttribute("alt", "Paulo na estação rodoviária a noite");
   }
 }
