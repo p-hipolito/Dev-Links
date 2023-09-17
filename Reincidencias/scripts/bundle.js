@@ -10,6 +10,7 @@ const handleFiles = () => {
       Papa.parse(file, {
         header: true,
         delimiter: ";",
+        skipEmptyLines: true,
         complete: (conversor) => {
           resolve(conversor);
         },
@@ -35,14 +36,14 @@ const handleFiles = () => {
     //filtra arquivos repetidos dentro do arquivo final:
     var temp = [];
     totalmerged = totalmerged.filter((item) => {
-      if (!temp.includes(item.Produto)) {
+      if (!temp.includes(item.Produto) && item.Produto) {
         temp.push(item.Produto);
         return true;
       }
     });
     console.log(totalmerged);
     console.log(temp);
-    const csv = Papa.unparse(totalmerged); //transforma arquivo em csv
+    const csv = Papa.unparse(totalmerged, { skipEmptyLines: true }); //transforma arquivo em csv
     downloadCSV(csv);
   });
 };
